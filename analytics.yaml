@@ -16,4 +16,9 @@ form:
       description: Enter the Google UA tracking code for analytics (UA-XXXXXXXX-X)
       label: UA Code
       placeholder: UA-XXXXXXXX-X
-
+      
+    ads.code:
+      type: input.text
+      description: Enter the Google Ads tracking code, if available
+      label: Ads Code
+      placeholder: AW-XXXXXXXX-X 
