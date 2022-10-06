@@ -8,17 +8,29 @@ form:
     enabled:
       type: input.checkbox
       label: Enabled
-      description: Globally enable analytic particles.
+      description: 'Globally enable analytic particles.'
       default: true
 
     ua.code:
       type: input.text
-      description: Enter the Google UA tracking code for analytics (UA-XXXXXXXX-X)
+      description: 'Enter the Google UA tracking code for analytics (UA-XXXXXXXX-X)'
       label: UA Code
       placeholder: UA-XXXXXXXX-X
+
+    ua.anonym:
+      type: input.checkbox
+      description: 'Send only Anonymous IP Addresses (mandatory in Europe)'
+      label: Anonym Statistics
+      default: false
       
     ads.code:
       type: input.text
       description: Enter the Google Ads tracking code, if available
       label: Ads Code
-      placeholder: AW-XXXXXXXX-X 
+      placeholder: AW-XXXXXXXX-X
+
+    ua.script:
+      type: textarea.textarea
+      description: Enter gtag Javascript code without script tag, if available
+      label: Full gtag
+      placeholder: gtag(); 
