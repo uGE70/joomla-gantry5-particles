@@ -5,19 +5,19 @@
     {% endscripts %}
 
     {% set script %}
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '{{ particle.ua.code }}');
-		{% if particle.ua.anonym %}
-		gtag('set', { 'anonymize_ip': true });
-		{% endif %}
-		{% if particle.ads.code is not empty %}
-		gtag('config', '{{ particle.ads.code }}');
-		{% endif %}
-		{% if particle.ua.script is not empty %}
-		{{ particle.ua.script|raw }}
-		{% endif %}
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', '{{ particle.ua.code }}');
+	{% if particle.ua.anonym %}
+	gtag('set', { 'anonymize_ip': true });
+	{% endif %}
+	{% if particle.ads.code is not empty %}
+	gtag('config', '{{ particle.ads.code }}');
+	{% endif %}
+	{% if particle.ua.script is not empty %}
+	{{ particle.ua.script|raw }}
+	{% endif %}
     {% endset %}
 
     {% do gantry.document.addInlineScript(script, 0) %}
