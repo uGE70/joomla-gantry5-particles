@@ -31,6 +31,6 @@ form:
 
     ua.script:
       type: textarea.textarea
-      description: Enter gtag Javascript code without script tag, if available
-      label: Full gtag
+      description: Enter gtag Javascript conversion code without script tag, if available
+      label: Conversion code
       placeholder: gtag(); 
